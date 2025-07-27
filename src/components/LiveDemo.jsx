@@ -4,8 +4,8 @@ import { ExternalLink, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 
 const LiveDemo = ({ title, url, fallback }) => {
   const [isOnline, setIsOnline] = useState(true)
-  const [isLoading, setIsLoading] = useState(false)
-  const [hasError, setHasError] = useState(true) // Always show screenshot
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
     // Check online status
@@ -77,11 +77,41 @@ const LiveDemo = ({ title, url, fallback }) => {
         >
           {/* Clickable Website Image */}
           <div className="relative w-full h-full flex items-center justify-center">
+            {isLoading && (
+              <div className="flex flex-col items-center space-y-4">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500"></div>
+                <p className="text-gray-600">Loading image...</p>
+              </div>
+            )}
+            
+            {hasError && (
+              <div className="flex flex-col items-center space-y-4 text-center">
+                <div className="text-red-500 text-6xl">⚠️</div>
+                <p className="text-red-600 font-semibold">Image failed to load</p>
+                <p className="text-gray-600 text-sm">Path: /Capstone-Presentation/assets/images/website.png</p>
+                <button 
+                  onClick={() => window.open(url, '_blank')}
+                  className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
+                >
+                  Open Website
+                </button>
+              </div>
+            )}
+            
             <img 
               src="/Capstone-Presentation/assets/images/website.png" 
               alt="Documentation Website Screenshot" 
-              className="max-w-full max-h-full object-contain cursor-pointer"
+              className={`max-w-full max-h-full object-contain cursor-pointer ${isLoading || hasError ? 'hidden' : ''}`}
               onClick={() => window.open(url, '_blank')}
+              onLoad={() => {
+                setIsLoading(false);
+                setHasError(false);
+              }}
+              onError={() => {
+                setIsLoading(false);
+                setHasError(true);
+                console.error('Failed to load image:', '/Capstone-Presentation/assets/images/website.png');
+              }}
             />
           </div>
 
