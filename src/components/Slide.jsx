@@ -12,7 +12,7 @@ const components = {
   h1: (props) => (
     <motion.h1 
       {...props} 
-      className="text-5xl font-bold text-gradient mb-6"
+      className="text-7xl font-bold text-gradient mb-6"
       initial={{ y: 50, opacity: 0, scale: 0.8 }}
       animate={{ y: 0, opacity: 1, scale: 1 }}
       transition={{ 
@@ -27,7 +27,7 @@ const components = {
   h2: (props) => (
     <motion.h2 
       {...props} 
-      className="text-3xl font-semibold text-gray-900 mb-4"
+      className="text-5xl font-semibold text-gray-900 mb-4"
       initial={{ y: 30, opacity: 0, x: -20 }}
       animate={{ y: 0, opacity: 1, x: 0 }}
       transition={{ 
@@ -41,7 +41,7 @@ const components = {
   h3: (props) => (
     <motion.h3 
       {...props} 
-      className="text-2xl font-medium text-gray-700 mb-3"
+      className="text-4xl font-medium text-gray-700 mb-3"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.4 }}
@@ -50,7 +50,7 @@ const components = {
   p: (props) => (
     <motion.p 
       {...props} 
-      className="text-lg text-gray-700 leading-relaxed mb-4"
+      className="text-2xl text-gray-700 leading-relaxed mb-4"
       initial={{ y: 25, opacity: 0, scale: 0.95 }}
       animate={{ y: 0, opacity: 1, scale: 1 }}
       transition={{ 
@@ -64,7 +64,7 @@ const components = {
   ul: (props) => (
     <motion.ul 
       {...props} 
-      className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-4"
+      className="list-disc list-inside text-2xl text-gray-700 space-y-2 mb-4"
       initial={{ y: 30, opacity: 0, x: -30 }}
       animate={{ y: 0, opacity: 1, x: 0 }}
       transition={{ 
@@ -78,7 +78,7 @@ const components = {
   ol: (props) => (
     <motion.ol 
       {...props} 
-      className="list-decimal list-inside text-lg text-gray-700 space-y-2 mb-4"
+      className="list-decimal list-inside text-2xl text-gray-700 space-y-2 mb-4"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.6 }}

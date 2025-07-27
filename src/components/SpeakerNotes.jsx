@@ -110,7 +110,7 @@ const SpeakerNotes = () => {
             <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">Elapsed Time</span>
-                <span className="font-mono text-lg font-bold text-white">
+                <span className="font-mono text-2xl font-bold text-white">
                   {getFormattedTime()}
                 </span>
               </div>

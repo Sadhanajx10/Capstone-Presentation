@@ -49,7 +49,7 @@ const HelpModal = () => {
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gradient">Help & Controls</h2>
+            <h2 className="text-4xl font-bold text-gradient">Help & Controls</h2>
             <button
               onClick={toggleHelp}
               className="p-2 hover:bg-gray-800 rounded-lg transition-colors"

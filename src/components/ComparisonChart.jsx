@@ -75,7 +75,7 @@ const ComparisonChart = ({ title, before, after }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <h1 className="text-4xl font-bold text-gradient mb-4">{title}</h1>
+        <h1 className="text-6xl font-bold text-gradient mb-4">{title}</h1>
       </motion.div>
 
       {/* Comparison Grid */}
@@ -88,7 +88,7 @@ const ComparisonChart = ({ title, before, after }) => {
         {/* Before Column */}
         <div className="space-y-6">
           <motion.h2 
-            className="text-2xl font-semibold text-red-400 text-center"
+            className="text-4xl font-semibold text-red-400 text-center"
             variants={itemVariants}
           >
             {before.title}
@@ -118,7 +118,7 @@ const ComparisonChart = ({ title, before, after }) => {
         {/* After Column */}
         <div className="space-y-6">
           <motion.h2 
-            className="text-2xl font-semibold text-green-400 text-center"
+            className="text-4xl font-semibold text-green-400 text-center"
             variants={itemVariants}
           >
             {after.title}

@@ -63,8 +63,8 @@ const ArchitectureDiagram = ({ title, description, diagram, highlights = [], dia
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <h1 className="text-4xl font-bold text-gradient mb-4">{title}</h1>
-        <p className="text-xl text-gray-700 max-w-3xl mx-auto">{description}</p>
+        <h1 className="text-6xl font-bold text-gradient mb-4">{title}</h1>
+        <p className="text-3xl text-gray-700 max-w-3xl mx-auto">{description}</p>
         {diagramLabel && (
           <motion.div
             className="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mt-4"

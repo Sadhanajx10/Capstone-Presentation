@@ -7,7 +7,7 @@ const WelcomeSlide = () => {
     <div className="slide-content text-center flex flex-col items-center justify-center min-h-screen">
       {/* Welcome Title */}
       <motion.h1
-        className="text-5xl font-bold text-primary-700 mb-6"
+        className="text-7xl font-bold text-primary-700 mb-6"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
@@ -37,7 +37,7 @@ const WelcomeSlide = () => {
 
       {/* Subtitle */}
       <motion.p
-        className="text-2xl text-gray-700 mb-8"
+        className="text-4xl text-gray-700 mb-8"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.8 }}
@@ -52,7 +52,7 @@ const WelcomeSlide = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.4, duration: 0.8 }}
       >
-        <div className="text-xl font-medium text-gray-800 leading-relaxed">
+        <div className="text-3xl font-medium text-gray-800 leading-relaxed">
           <TypewriterText
             text="One site. Every doc. No more ClickUp clutter for DevOps team"
             speed={60}

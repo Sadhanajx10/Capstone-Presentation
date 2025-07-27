@@ -53,7 +53,7 @@ const LiveDemo = ({ title, url, fallback }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <h1 className="text-3xl font-bold text-gradient mb-2">{title}</h1>
+        <h1 className="text-5xl font-bold text-gradient mb-2">{title}</h1>
         
         {/* Status Indicators */}
         <div className="flex items-center justify-center space-x-4 mb-2">
@@ -80,15 +80,15 @@ const LiveDemo = ({ title, url, fallback }) => {
             {isLoading && (
               <div className="flex flex-col items-center space-y-4">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500"></div>
-                <p className="text-gray-600">Loading image...</p>
+                <p className="text-gray-600 text-xl">Loading image...</p>
               </div>
             )}
             
             {hasError && (
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="text-red-500 text-6xl">⚠️</div>
-                <p className="text-red-600 font-semibold">Image failed to load</p>
-                <p className="text-gray-600 text-sm">Path: /Capstone-Presentation/assets/images/website.png</p>
+                <p className="text-red-600 font-semibold text-xl">Image failed to load</p>
+                <p className="text-gray-600 text-lg">Path: /Capstone-Presentation/assets/images/website.png</p>
                 <button 
                   onClick={() => window.open(url, '_blank')}
                   className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
