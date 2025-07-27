@@ -2,7 +2,7 @@
 
 A modern, interactive React presentation deck built for the Aeropay DevOps Knowledge Hub capstone project. Features smooth animations, live demos, and comprehensive speaker notes.
 
-## 🚀 Features
+##  Features
 
 ### Core Presentation Features
 - **Animated Splash Screen** - Company logo with smooth transitions
@@ -28,7 +28,7 @@ A modern, interactive React presentation deck built for the Aeropay DevOps Knowl
 - **Static Export** - Export to static HTML for offline use
 - **Auto-advance** - Optional automatic slide progression
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 - **React 18** - Modern React with hooks
 - **Vite** - Fast build tool and dev server
@@ -40,7 +40,7 @@ A modern, interactive React presentation deck built for the Aeropay DevOps Knowl
 - **Prism.js** - Code syntax highlighting
 - **PWA Plugin** - Progressive Web App features
 
-## 📦 Installation
+##  Installation
 
 1. **Clone the repository**
    ```bash
@@ -187,7 +187,7 @@ The presentation includes PWA features:
 - Safari
 - Mobile browsers
 
-## 🔧 Configuration
+##  Configuration
 
 ### Vite Configuration
 Edit `vite.config.js` for:
@@ -203,7 +203,7 @@ Edit `tailwind.config.js` for:
 - Font families
 - Responsive breakpoints
 
-## 📱 Mobile Support
+##  Mobile Support
 
 The presentation is fully responsive and includes:
 - Touch navigation
@@ -279,7 +279,7 @@ This project is licensed under the MIT License.
 4. Test thoroughly
 5. Submit a pull request
 
-## 📞 Support
+##  Support
 
 For questions or issues:
 - Check the troubleshooting section
