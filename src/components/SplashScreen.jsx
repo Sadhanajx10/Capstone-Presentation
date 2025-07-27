@@ -23,11 +23,11 @@ const SplashScreen = () => {
             delay: 0.2 
           }}
         >
-          <img 
-            src="/assets/images/Aeropay_home_logo.png" 
-            alt="Aeropay Logo" 
-            className="w-96 h-auto object-contain"
-          />
+                  <img 
+          src="./assets/images/Aeropay_home_logo.png" 
+          alt="Aeropay Logo" 
+          className="w-96 h-auto object-contain"
+        />
         </motion.div>
 
         {/* Loading Animation */}

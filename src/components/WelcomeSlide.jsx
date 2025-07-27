@@ -28,7 +28,7 @@ const WelcomeSlide = () => {
         }}
       >
         <img 
-          src="/assets/images/android-chrome-512x512.png" 
+          src="./assets/images/android-chrome-512x512.png" 
           alt="High Quality Logo" 
           className="w-32 h-32 object-contain"
           style={{ imageRendering: 'high-quality' }}

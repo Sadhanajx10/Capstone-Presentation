@@ -78,7 +78,7 @@ const LiveDemo = ({ title, url, fallback }) => {
           {/* Clickable Website Image */}
           <div className="relative w-full h-full flex items-center justify-center">
             <img 
-              src="/assets/images/website.png" 
+              src="./assets/images/website.png" 
               alt="Documentation Website Screenshot" 
               className="max-w-full max-h-full object-contain cursor-pointer"
               onClick={() => window.open(url, '_blank')}
