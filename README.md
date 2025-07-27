@@ -1,6 +1,6 @@
 # Capstone Presentation Deck
 
-A modern, interactive React presentation deck built for the Aeropay DevOps Knowledge Hub capstone project. Features smooth animations, live demos, and comprehensive speaker notes.
+A modern, interactive React presentation deck built for the Aeropay DevOps Documentation Site capstone project. Features smooth animations, live demos, and comprehensive speaker notes.
 
 ##  Features
 
