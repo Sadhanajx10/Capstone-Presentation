@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Reem Kufi', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-primary-50 text-gray-900 overflow-hidden;
+  }
+  
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .slide-container {
+    @apply w-full h-screen flex items-center justify-center p-8;
+  }
+  
+  .slide-content {
+    @apply max-w-6xl w-full mx-auto;
+  }
+  
+  .code-block {
+    @apply bg-gray-900 rounded-lg p-4 font-mono text-sm overflow-x-auto;
+  }
+  
+  .highlight {
+    @apply bg-primary-500/20 border-l-4 border-primary-500 pl-4 py-2;
+  }
+  
+  .progress-bar {
+    @apply fixed top-0 left-0 h-1 bg-gradient-to-r from-primary-500 to-primary-700 z-50;
+    transition: width 0.3s ease;
+  }
+  
+  .keyboard-shortcut {
+    @apply bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs font-mono;
+  }
+  
+  .speaker-notes {
+    @apply bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-lg p-4;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-400 to-primary-700 bg-clip-text text-transparent;
+  }
+  
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .slide-transition {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-black;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .slide-container {
+    @apply h-auto min-h-screen;
+  }
+} 
