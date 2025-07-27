@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/Capstone-Presentation/sw.js', { scope: '/Capstone-Presentation/' })})}
