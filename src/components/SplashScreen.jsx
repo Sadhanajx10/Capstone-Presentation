@@ -24,7 +24,7 @@ const SplashScreen = () => {
           }}
         >
                   <img 
-          src="./assets/images/Aeropay_home_logo.png" 
+          src="/Capstone-Presentation/assets/images/Aeropay_home_logo.png" 
           alt="Aeropay Logo" 
           className="w-96 h-auto object-contain"
         />
