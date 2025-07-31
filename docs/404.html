@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <title>Capstone Presentation</title>
     <script type="text/javascript">
-      // Force redirect to Capstone Presentation
+      // Simple redirect to main page
       var l = window.location;
       var baseUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/Capstone-Presentation/';
       
-      // Always redirect to the correct base URL
-      if (l.pathname !== '/Capstone-Presentation/') {
+      // If we're not already on the base URL, redirect there
+      if (l.pathname !== '/Capstone-Presentation/' && !l.pathname.startsWith('/Capstone-Presentation/')) {
         l.replace(baseUrl);
       } else {
-        // If we're already on the correct path but got a 404, reload
+        // If we are on the base URL but got a 404, just reload
         l.reload();
       }
     </script>
