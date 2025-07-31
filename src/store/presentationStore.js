@@ -73,6 +73,16 @@ export const usePresentationStore = create(
       
       setAutoAdvance: (enabled) => set({ autoAdvance: enabled }),
       
+      // Reset presentation to start
+      resetPresentation: () => set({ 
+        currentSlide: 0, 
+        showTOC: false, 
+        showHelp: false,
+        startTime: null,
+        elapsedTime: 0,
+        isTimerRunning: false
+      }),
+      
       // Keyboard shortcuts
       handleKeyPress: (key) => {
         const { 
@@ -142,9 +152,9 @@ export const usePresentationStore = create(
     {
       name: 'presentation-store',
       partialize: (state) => ({
-        currentSlide: state.currentSlide,
         showSpeakerNotes: state.showSpeakerNotes,
         autoAdvance: state.autoAdvance
+        // Removed currentSlide to prevent persistence
       })
     }
   )

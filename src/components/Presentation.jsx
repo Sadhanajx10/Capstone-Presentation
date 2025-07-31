@@ -12,13 +12,27 @@ const Presentation = () => {
     nextSlide, 
     prevSlide,
     autoAdvance,
-    autoAdvanceInterval
+    autoAdvanceInterval,
+    resetPresentation
   } = usePresentationStore()
 
-  // Set total slides count
+  // Reset presentation and set total slides count on mount
   useEffect(() => {
+    resetPresentation()
     setTotalSlides(slides.length)
-  }, [setTotalSlides])
+  }, [resetPresentation, setTotalSlides])
+
+  // Handle URL-based navigation (for direct links)
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const slideParam = urlParams.get('slide')
+    if (slideParam) {
+      const slideIndex = parseInt(slideParam)
+      if (!isNaN(slideIndex) && slideIndex >= 0 && slideIndex < slides.length) {
+        usePresentationStore.getState().setCurrentSlide(slideIndex)
+      }
+    }
+  }, [slides.length])
 
   // Auto-advance functionality
   useEffect(() => {
