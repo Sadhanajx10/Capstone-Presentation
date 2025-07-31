@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { usePresentationStore } from './store/presentationStore'
 import SplashScreen from './components/SplashScreen'
@@ -53,34 +52,26 @@ function App() {
   }
 
   return (
-    <Router>
-              <div className="relative w-full h-screen bg-primary-50 text-gray-900 overflow-hidden">
-        {/* Progress Bar */}
-        <ProgressBar />
-        
-        {/* Timer */}
-        <Timer />
-        
-        {/* Keyboard Handler */}
-        <KeyboardHandler />
-        
-        {/* Main Content */}
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Presentation />} />
-            <Route path="/toc" element={<TableOfContents />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </AnimatePresence>
-        
-        {/* Modals */}
-        <AnimatePresence>
-          {showTOC && <TableOfContents />}
-          {showHelp && <HelpModal />}
-          {showSpeakerNotes && <SpeakerNotes />}
-        </AnimatePresence>
-      </div>
-    </Router>
+    <div className="relative w-full h-screen bg-primary-50 text-gray-900 overflow-hidden">
+      {/* Progress Bar */}
+      <ProgressBar />
+      
+      {/* Timer */}
+      <Timer />
+      
+      {/* Keyboard Handler */}
+      <KeyboardHandler />
+      
+      {/* Main Content */}
+      <Presentation />
+      
+      {/* Modals */}
+      <AnimatePresence>
+        {showTOC && <TableOfContents />}
+        {showHelp && <HelpModal />}
+        {showSpeakerNotes && <SpeakerNotes />}
+      </AnimatePresence>
+    </div>
   )
 }
 
