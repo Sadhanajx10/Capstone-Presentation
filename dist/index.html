@@ -21,14 +21,36 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     
     <title>Capstone Presentation - DevOps Documentation Site</title>
-    <script type="module" crossorigin src="/Capstone-Presentation/assets/index-b5e83c3e.js"></script>
+    <script type="module" crossorigin src="/Capstone-Presentation/assets/index-7d9d8639.js"></script>
     <link rel="modulepreload" crossorigin href="/Capstone-Presentation/assets/vendor-fdd35676.js">
     <link rel="modulepreload" crossorigin href="/Capstone-Presentation/assets/ui-f7df6b30.js">
     <link rel="modulepreload" crossorigin href="/Capstone-Presentation/assets/animations-8e2e0edb.js">
-    <link rel="stylesheet" href="/Capstone-Presentation/assets/index-abd18ff1.css">
+    <link rel="stylesheet" href="/Capstone-Presentation/assets/index-d7e9626c.css">
   <link rel="manifest" href="/Capstone-Presentation/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/Capstone-Presentation/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
     
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
   </body>
 </html> 
