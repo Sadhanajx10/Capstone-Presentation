@@ -26,12 +26,19 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script type="text/javascript">
-      // Simple URL handling for GitHub Pages
+      // Force correct URL for GitHub Pages
       (function() {
-        // Ensure we're on the correct base path
         var l = window.location;
-        if (l.pathname !== '/Capstone-Presentation/' && !l.pathname.startsWith('/Capstone-Presentation/')) {
-          l.replace('/Capstone-Presentation/');
+        var correctPath = '/Capstone-Presentation/';
+        
+        // If we're not on the correct path, redirect
+        if (l.pathname !== correctPath) {
+          l.replace(correctPath);
+        }
+        
+        // Prevent any redirects to portfolio
+        if (l.hostname === 'sadhanajx10.github.io' && l.pathname === '/') {
+          l.replace(correctPath);
         }
       })();
     </script>

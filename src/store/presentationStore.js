@@ -55,9 +55,10 @@ export const usePresentationStore = create(
       toggleSpeakerNotes: () => set((state) => ({ showSpeakerNotes: !state.showSpeakerNotes })),
       
       startPresentation: () => {
+        const state = get()
         set({ 
           isPresenting: true, 
-          startTime: Date.now(),
+          startTime: state.startTime || Date.now(),
           isTimerRunning: true 
         })
       },
@@ -73,14 +74,12 @@ export const usePresentationStore = create(
       
       setAutoAdvance: (enabled) => set({ autoAdvance: enabled }),
       
-      // Reset presentation to start
+      // Reset presentation to start (but keep timer running)
       resetPresentation: () => set({ 
         currentSlide: 0, 
         showTOC: false, 
-        showHelp: false,
-        startTime: null,
-        elapsedTime: 0,
-        isTimerRunning: false
+        showHelp: false
+        // Don't reset timer - let it continue from where it was
       }),
       
       // Keyboard shortcuts
@@ -153,8 +152,11 @@ export const usePresentationStore = create(
       name: 'presentation-store',
       partialize: (state) => ({
         showSpeakerNotes: state.showSpeakerNotes,
-        autoAdvance: state.autoAdvance
-        // Removed currentSlide to prevent persistence
+        autoAdvance: state.autoAdvance,
+        startTime: state.startTime,
+        elapsedTime: state.elapsedTime,
+        isTimerRunning: state.isTimerRunning
+        // Keep timer state persistent
       })
     }
   )

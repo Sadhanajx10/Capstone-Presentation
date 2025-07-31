@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug - Capstone Presentation</title>
+</head>
+<body>
+    <h1>Debug Information</h1>
+    <p>Current URL: <span id="current-url"></span></p>
+    <p>Pathname: <span id="pathname"></span></p>
+    <p>Hostname: <span id="hostname"></span></p>
+    <p>Referrer: <span id="referrer"></span></p>
+    
+    <script>
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('pathname').textContent = window.location.pathname;
+        document.getElementById('hostname').textContent = window.location.hostname;
+        document.getElementById('referrer').textContent = document.referrer;
+        
+        console.log('Debug info:', {
+            url: window.location.href,
+            pathname: window.location.pathname,
+            hostname: window.location.hostname,
+            referrer: document.referrer
+        });
+    </script>
+</body>
+</html> 
