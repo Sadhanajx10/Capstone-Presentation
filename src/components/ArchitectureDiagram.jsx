@@ -118,6 +118,30 @@ const ArchitectureDiagram = ({ title, description, diagram, highlights = [], dia
     setPosition({ x: newX, y: newY })
   }
 
+  const handleScrollUp = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setPosition(prev => ({ ...prev, y: prev.y + 50 }))
+  }
+
+  const handleScrollDown = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setPosition(prev => ({ ...prev, y: prev.y - 50 }))
+  }
+
+  const handleScrollLeft = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setPosition(prev => ({ ...prev, x: prev.x + 50 }))
+  }
+
+  const handleScrollRight = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setPosition(prev => ({ ...prev, x: prev.x - 50 }))
+  }
+
   return (
     <div className="w-full h-full flex flex-col">
       {/* Header */}
@@ -186,6 +210,61 @@ const ArchitectureDiagram = ({ title, description, diagram, highlights = [], dia
         </div>
       </div>
 
+      {/* Scroll Controls */}
+      <div 
+        className="flex justify-center mb-4 space-x-2"
+        onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => e.stopPropagation()}
+      >
+        <motion.button
+          onClick={handleScrollUp}
+          className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Scroll Up"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+          </svg>
+        </motion.button>
+        
+        <motion.button
+          onClick={handleScrollLeft}
+          className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Scroll Left"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </motion.button>
+        
+        <motion.button
+          onClick={handleScrollRight}
+          className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Scroll Right"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </motion.button>
+        
+        <motion.button
+          onClick={handleScrollDown}
+          className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Scroll Down"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </motion.button>
+      </div>
+
       {/* Diagram Container - Full Height with Scroll */}
       <div className="flex-1 overflow-hidden relative">
         <motion.div
@@ -203,10 +282,11 @@ const ArchitectureDiagram = ({ title, description, diagram, highlights = [], dia
 
           {/* Zoom Container */}
           <div
-            className="relative overflow-hidden"
+            className="relative overflow-auto"
             style={{
               cursor: isDragging ? 'grabbing' : 'grab',
-              minHeight: '60vh'
+              minHeight: '60vh',
+              maxHeight: '70vh'
             }}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
