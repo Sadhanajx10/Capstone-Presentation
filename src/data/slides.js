@@ -19,78 +19,34 @@ export const slides = [
     type: "content",
     layout: "full",
     content: `
-# The Problem: ClickUp Documentation Limitations
+# Problem: ClickUp Documentation Chaos
 
 <div class="grid grid-cols-2 gap-8 mt-8">
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">What We Needed</h3>
+<h3 class="text-xl font-bold text-primary-800 mb-6">What Engineers Need</h3>
 <ul class="space-y-4 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Git-backed</strong> (markdown + PR-based workflow)</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Version Control</strong> with proper Git history and rollback capability</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Performant</strong> and fast for daily reference</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Easy to maintain</strong> with structured content</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Support diagrams</strong>, runbooks, and architecture guides</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Git-backed workflow</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Version control & rollback</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Fast search & navigation</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Structured content</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Diagram support</li>
 </ul>
 </div>
 
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">ClickUp's Limitations</h3>
+<h3 class="text-xl font-bold text-primary-800 mb-6">ClickUp Problems</h3>
 <ul class="space-y-4 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Inconsistent Formatting</strong>: Every doc looked different</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Poor Navigation</strong>: Difficult to find specific procedures</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Too Slow</strong>: 5-10 minutes to find DevOps procedures</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>No Version Control</strong>: Changes lost, no rollback capability</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Limited Structure</strong>: Can't support system diagrams properly</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>No Git Integration</strong>: No PR-based contribution workflow</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Inconsistent formatting</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Poor navigation</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>5-10 minutes to find procedures</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>No version control</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Limited diagram support</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>No Git integration</li>
 </ul>
 </div>
 </div>
 
-<div class="mt-6 bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-2 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-2xl font-bold text-primary-800 mb-6 text-center">Impact on DevOps Team</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="bg-white/60 backdrop-blur-sm p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-<h4 class="text-lg font-semibold text-primary-700 mb-3">Team Efficiency</h4>
-<ul class="space-y-3 text-gray-700">
-<li class="flex items-start hover:bg-primary-50 p-3 rounded-md transition-all duration-300">
-<span class="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
-<div class="text-sm">
-<strong class="text-primary-800">Onboarding:</strong> New engineers/interns spending 30% or more productive time just to find documents
-</div>
-</li>
-<li class="flex items-start hover:bg-primary-50 p-3 rounded-md transition-all duration-300">
-<span class="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
-<div class="text-sm">
-<strong class="text-primary-800">Incident Response:</strong> Critical procedures buried in ClickUp
-</div>
-</li>
-</ul>
-</div>
-<div class="bg-white/60 backdrop-blur-sm p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-<h4 class="text-lg font-semibold text-primary-700 mb-3">Knowledge Management</h4>
-<ul class="space-y-3 text-gray-700">
-<li class="flex items-start hover:bg-primary-50 p-3 rounded-md transition-all duration-300">
-<span class="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
-<div class="text-sm">
-<strong class="text-primary-800">Knowledge Loss:</strong> Bus factor = 1 for many processes
-</div>
-</li>
-<li class="flex items-start hover:bg-primary-50 p-3 rounded-md transition-all duration-300">
-<span class="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
-<div class="text-sm">
-<strong class="text-primary-800">Productivity:</strong> 30% of time spent searching for information
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
 
-<div class="mt-8 text-center">
-<blockquote class="text-2xl font-semibold text-gray-800 italic bg-gradient-to-r from-primary-100 to-primary-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-"Finding deployment procedures took 8 minutes before; now it's 30 seconds."
-</blockquote>
-</div>
     `,
     speakerNotes: `
 - Emphasize the technical requirements (Git-backed, performant, structured)
@@ -100,59 +56,38 @@ export const slides = [
     `
   },
   {
-    id: 2,
+    id: 5,
     title: "Solution Overview",
     type: "content",
     layout: "full",
     content: `
-# What We Built: Modern DevOps Documentation Hub
+# The Shift: From ClickUp to Git-First Documentation
 
 <div class="grid grid-cols-2 gap-6 mt-8">
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">Technology Stack</h3>
+<h3 class="text-xl font-bold text-primary-800 mb-6">Our Own DevOps Documentation Site</h3>
 <ul class="space-y-4 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Docusaurus</strong>: React-based docs with MDX support</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Markdown/MDX</strong>: Easy to write, supports React components</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Mermaid.js</strong>: Built-in diagram support</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>GitHub Actions</strong>: Automated CI/CD pipeline</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>JumpCloud SSO</strong>: Secure access control</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Structured & versioned</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Designed for engineers</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Git-backed workflow</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Proper evaluation needed</li>
 </ul>
 </div>
 
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">DevOps Best Practices</h3>
+<h3 class="text-xl font-bold text-primary-800 mb-6">Key Requirements</h3>
 <ul class="space-y-4 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Git-backed Workflow</strong>: All changes via Pull Requests</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Automated Linting</strong>: Markdown formatting checks</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Branch Protection</strong>: No direct changes to main</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>CODEOWNERS</strong>: Auto-assigns DevOps reviewers</li>
-</ul>
-</div>
-</div>
-
-<div class="grid grid-cols-2 gap-6 mt-6">
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">GitHub Actions Automation</h3>
-<ul class="space-y-4 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Markdown Lint</strong>: Keeps docs clean and consistent</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Auto-Deploy</strong>: Publishes after every merge</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Quality Gates</strong>: Only approved changes go live</li>
-</ul>
-</div>
-
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">Security & Scalability</h3>
-<ul class="space-y-4 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>SSO Protection</strong>: Only team members can access</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Lightweight Platform</strong>: Fast and maintainable</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Easy Contribution</strong>: Anyone can add content</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Markdown support</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>React components</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Built-in search</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Versioning system</li>
 </ul>
 </div>
 </div>
 
 <div class="mt-6 text-center">
 <blockquote class="text-2xl font-semibold text-gray-800 italic bg-gradient-to-r from-primary-100 to-primary-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-"All docs in one place: runbooks, infrastructure, onboarding, and diagrams."
+"Before jumping into the final tech stack, I wanted to evaluate options properly."
 </blockquote>
 </div>
     `,
@@ -164,40 +99,47 @@ export const slides = [
     `
   },
   {
-    id: 3,
+    id: 6,
     title: "System Architecture & GitHub Workflow",
     type: "architecture",
     layout: "full",
     content: {
                 diagram: `graph TD
-        A[Developer] --> B[Git Commit]
-        B --> C[GitHub Repo]
-        C --> D[Branch Protection]
-        D --> E[Pull Request]
-        E --> F[Quality Checks]
-        F --> G{All Pass?}
-        G -->|Yes| H[Code Review]
-        G -->|No| I[Auto-Reject]
-        I --> J[Developer Fixes]
-        J --> B
-        H --> K[Approve & Merge]
-        K --> L[GitHub Actions]
-        L --> M[Build & Deploy]
-        M --> N[Live Documentation]
-        N --> O[JumpCloud SSO]
+        A[Developer] --> B[Create Feature Branch]
+        B --> C[Edit Markdown/MDX Files]
+        C --> D[Local Testing: npm start]
+        D --> E[Git Commit with Conventional Commits]
+        E --> F[Push & Create Pull Request]
+        F --> G[Automated Checks]
+        G --> H{PR Title Valid?}
+        H -->|No| I[Edit PR Title]
+        I --> F
+        H -->|Yes| J[Markdown Linting]
+        J --> K{All Tests Pass?}
+        K -->|No| L[Fix Issues]
+        L --> E
+        K -->|Yes| M[DevOps Team Review]
+        M --> N{Approved?}
+        N -->|No| O[Address Feedback]
+        O --> E
+        N -->|Yes| P[Merge to Main]
+        P --> Q[GitHub Actions Deploy]
+        Q --> R[Build Docusaurus Site]
+        R --> S[Deploy to GitHub Pages]
+        S --> T[Live Documentation Site]
+        T --> U[JumpCloud SSO Access]
         
         style A fill:#e1f5fe
-        style C fill:#f3e5f5
-        style D fill:#fff3e0
-        style E fill:#e8f5e8
-        style F fill:#fff8e1
-        style G fill:#e3f2fd
-        style H fill:#e8f5e8
-        style L fill:#fce4ec
-        style M fill:#e0f2f1
-        style N fill:#f1f8e9
-        style O fill:#fff3e0`,
-      title: "GitHub Workflow with Protection & Quality Gates",
+        style F fill:#f3e5f5
+        style G fill:#fff3e0
+        style J fill:#e8f5e8
+        style M fill:#fff8e1
+        style Q fill:#e3f2fd
+        style R fill:#e8f5e8
+        style S fill:#fce4ec
+        style T fill:#e0f2f1
+        style U fill:#f1f8e9`,
+      title: "GitHub Workflow",
       description: "Complete CI/CD pipeline with automated quality checks, branch protection, and secure deployment",
       diagramLabel: "Mermaid Diagram"
     },
@@ -210,36 +152,14 @@ export const slides = [
     `
   },
   {
-    id: 4,
+    id: 3,
     title: "Static Site Generator Comparison",
     type: "content",
     layout: "full",
     content: `
-# Static Site Generator Evaluation Results
+# Static Site Generator Evaluation
 
 <div class="grid grid-cols-3 gap-6 mt-8">
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
-<div class="text-center mb-4">
-<h3 class="text-xl font-bold text-primary-800">Docusaurus</h3>
-</div>
-<div class="space-y-3">
-<h4 class="font-semibold text-primary-700">Pros:</h4>
-<ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Excellent Markdown support with MDX</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Built-in search with Algolia integration</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Strong React ecosystem and extensibility</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Great documentation and community support</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Versioning and i18n out of the box</li>
-</ul>
-<h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
-<ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Steeper learning curve for non-React developers</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Limited diagram support (requires plugins)</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>More complex setup for custom themes</li>
-</ul>
-</div>
-</div>
-
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
 <div class="text-center mb-4">
 <h3 class="text-xl font-bold text-primary-800">MkDocs</h3>
@@ -247,16 +167,14 @@ export const slides = [
 <div class="space-y-3">
 <h4 class="font-semibold text-primary-700">Pros:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Simple YAML configuration</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Excellent search with built-in search</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Material theme is very polished</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Easy to customize and extend</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Great for technical documentation</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Easy to use</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Simple YAML config</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Material theme</li>
 </ul>
 <h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Limited plugin ecosystem</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Less flexible for complex layouts</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Limited customization</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>No React support</li>
 <li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>No built-in versioning</li>
 </ul>
 </div>
@@ -269,16 +187,36 @@ export const slides = [
 <div class="space-y-3">
 <h4 class="font-semibold text-primary-700">Pros:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Extremely fast build times</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Extremely fast</li>
 <li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Large theme ecosystem</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Flexible templating with Go</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Good for large sites</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Flexible templating</li>
 </ul>
 <h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Steeper learning curve</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Less intuitive for non-developers</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Limited built-in search capabilities</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Steep learning curve</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Hard to customize</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Limited search</li>
+</ul>
+</div>
+</div>
+
+<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-500 hover:border-primary-600 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
+<div class="text-center mb-4">
+<h3 class="text-xl font-bold text-primary-800">Docusaurus</h3>
+<div class="text-sm text-primary-600 font-semibold">WINNER</div>
+</div>
+<div class="space-y-3">
+<h4 class="font-semibold text-primary-700">Pros:</h4>
+<ul class="text-sm text-gray-700 space-y-2">
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>React-based with MDX</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Built-in search</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Versioning system</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Strong ecosystem</li>
+</ul>
+<h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
+<ul class="text-sm text-gray-700 space-y-2">
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Learning curve</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Complex setup</li>
 </ul>
 </div>
 </div>
@@ -286,15 +224,15 @@ export const slides = [
 
 <div class="mt-8 bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-300 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
 <div class="text-center">
-<h3 class="text-2xl font-bold text-primary-800 mb-4">Our Recommendation: Docusaurus</h3>
+<h3 class="text-2xl font-bold text-primary-800 mb-4">Docusaurus: Best Fit for Our Team</h3>
 <div class="grid grid-cols-2 gap-4 text-gray-700">
 <div class="text-center">
-<div class="text-lg font-semibold mb-2">Best Balance</div>
-<div class="text-sm">Features and extensibility</div>
+<div class="text-lg font-semibold mb-2">React + MDX</div>
+<div class="text-sm">Supports React components</div>
 </div>
 <div class="text-center">
-<div class="text-lg font-semibold mb-2">Strong Ecosystem</div>
-<div class="text-sm">React components and search</div>
+<div class="text-lg font-semibold mb-2">Built-in Features</div>
+<div class="text-sm">Search & versioning</div>
 </div>
 </div>
 </div>
@@ -308,54 +246,31 @@ export const slides = [
     `
   },
   {
-    id: 5,
+    id: 4,
     title: "Hosting Strategy Comparison",
     type: "content",
     layout: "full",
     content: `
-# Hosting Strategy Evaluation
+# Hosting Platform Evaluation
 
 <div class="grid grid-cols-3 gap-6 mt-8">
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
 <div class="text-center mb-4">
-<h3 class="text-xl font-bold text-primary-800">GitHub Pages</h3>
-</div>
-<div class="space-y-3">
-<h4 class="font-semibold text-primary-700">Pros:</h4>
-<ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Native support for private repositories</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>JumpCloud SSO works automatically via GitHub auth</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Zero additional configuration needed</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Free for private repos</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Integrated with our existing GitHub workflow</li>
-</ul>
-<h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
-<ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Limited customization options</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>No custom domain for private repos</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Less control over access patterns</li>
-</ul>
-</div>
-</div>
-
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
-<div class="text-center mb-4">
 <h3 class="text-xl font-bold text-primary-800">AWS S3 + CloudFront</h3>
+<div class="text-sm text-red-600 font-semibold">FAILED</div>
 </div>
 <div class="space-y-3">
 <h4 class="font-semibold text-primary-700">Pros:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Full control over access patterns</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Custom domain support</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Flexible access control with signed cookies/headers</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Scalable and performant</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Can implement custom JumpCloud SSO integration</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Full control</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Custom domain</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Flexible access</li>
 </ul>
 <h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>More complex setup and maintenance</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Additional cost for CloudFront</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Requires custom access control implementation</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Failed SSO integration</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Complex HTTPS redirects</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Unscalable for our case</li>
 </ul>
 </div>
 </div>
@@ -367,15 +282,35 @@ export const slides = [
 <div class="space-y-3">
 <h4 class="font-semibold text-primary-700">Pros:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Server-side rendering capabilities</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Maximum flexibility for custom features</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Full control over everything</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Full control</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Customizable</li>
 </ul>
 <h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Much higher cost and complexity</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Requires server maintenance</li>
-<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Overkill for static documentation</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Too expensive</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Heavy for static site</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Requires maintenance</li>
+</ul>
+</div>
+</div>
+
+<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-500 hover:border-primary-600 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl">
+<div class="text-center mb-4">
+<h3 class="text-xl font-bold text-primary-800">GitHub Pages</h3>
+<div class="text-sm text-primary-600 font-semibold">WINNER</div>
+</div>
+<div class="space-y-3">
+<h4 class="font-semibold text-primary-700">Pros:</h4>
+<ul class="text-sm text-gray-700 space-y-2">
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Git integration</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>SSO support</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Zero infra maintenance</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>CI/CD compatibility</li>
+</ul>
+<h4 class="font-semibold text-primary-700 mt-4">Cons:</h4>
+<ul class="text-sm text-gray-700 space-y-2">
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>Limited customization</li>
+<li class="flex items-start"><span class="w-2 h-2 bg-primary-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>No custom domain</li>
 </ul>
 </div>
 </div>
@@ -383,15 +318,15 @@ export const slides = [
 
 <div class="mt-8 bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-xl border-2 border-primary-300 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
 <div class="text-center">
-<h3 class="text-2xl font-bold text-primary-800 mb-4">Our Recommendation: GitHub Pages</h3>
+<h3 class="text-2xl font-bold text-primary-800 mb-4">Pivoted to GitHub Pages</h3>
 <div class="grid grid-cols-2 gap-4 text-gray-700">
 <div class="text-center">
-<div class="text-lg font-semibold mb-2">Simplest Integration</div>
-<div class="text-sm">JumpCloud SSO works automatically</div>
+<div class="text-lg font-semibold mb-2">Trial → Failed → Decision</div>
+<div class="text-sm">Real-world testing approach</div>
 </div>
 <div class="text-center">
-<div class="text-lg font-semibold mb-2">Zero Maintenance</div>
-<div class="text-sm">Perfect fit for Git-based workflow</div>
+<div class="text-lg font-semibold mb-2">Perfect Integration</div>
+<div class="text-sm">JumpCloud SSO + Git workflow</div>
 </div>
 </div>
 </div>
@@ -405,51 +340,40 @@ export const slides = [
     `
   },
   {
-    id: 6,
+    id: 7,
     title: "Implementation Details",
     type: "content",
     layout: "full",
     content: `
-# Implementation Details
+# Site Architecture + Tools Used
 
-<div class="grid grid-cols-3 gap-6 mt-8">
+<div class="grid grid-cols-2 gap-6 mt-8">
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-4">Technology Stack</h3>
-<ul class="space-y-3 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Static Site Generator</strong>: Docusaurus 2.x</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Hosting</strong>: GitHub Pages (private repository)</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>CI/CD</strong>: GitHub Actions</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Access Control</strong>: JumpCloud SSO via GitHub authentication</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Search</strong>: Algolia DocSearch (free for open source)</li>
+<h3 class="text-xl font-bold text-primary-800 mb-6">Technology Stack</h3>
+<ul class="space-y-4 text-gray-700">
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Docusaurus for static site</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>MDX to mix Markdown with React</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Framer Motion for animations</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>TailwindCSS for styling</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Mermaid.js for diagrams</li>
 </ul>
 </div>
 
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-4">Key Features Implemented</h3>
-<ul class="space-y-3 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Git-based Workflow</strong>: PR reviews, branch protection, CODEOWNERS</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Automated Quality Checks</strong>: Markdown linting, link validation</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Version Control</strong>: Git history for all changes</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Search Optimization</strong>: Fast, relevant results</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span><strong>Mobile Responsive</strong>: Works on all devices</li>
+<h3 class="text-xl font-bold text-primary-800 mb-6">Key Innovation</h3>
+<ul class="space-y-4 text-gray-700">
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>MDX made docs interactive</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>React components in docs</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Charts & animated content</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Reusable layout blocks</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Modern, intuitive UX</li>
 </ul>
 </div>
-
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-4">Deployment Pipeline</h3>
-<ol class="space-y-3 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-6 h-6 bg-primary-500 text-white rounded-full mr-3 flex items-center justify-center text-xs font-bold">1</span><strong>Developer</strong> creates PR with documentation changes</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-6 h-6 bg-primary-500 text-white rounded-full mr-3 flex items-center justify-center text-xs font-bold">2</span><strong>GitHub Actions</strong> runs automated checks</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-6 h-6 bg-primary-500 text-white rounded-full mr-3 flex items-center justify-center text-xs font-bold">3</span><strong>Quality Gates</strong> ensure content meets standards</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-6 h-6 bg-primary-500 text-white rounded-full mr-3 flex items-center justify-center text-xs font-bold">4</span><strong>Auto-deploy</strong> to GitHub Pages on merge</li>
-<li class="flex items-center hover:bg-primary-100 p-2 rounded-lg transition-all duration-300"><span class="w-6 h-6 bg-primary-500 text-white rounded-full mr-3 flex items-center justify-center text-xs font-bold">5</span><strong>Access Control</strong> via JumpCloud SSO</li>
-</ol>
-</div>
 </div>
 
-<div class="mt-8 text-center">
+<div class="mt-6 text-center">
 <blockquote class="text-2xl font-semibold text-gray-800 italic bg-gradient-to-r from-primary-100 to-primary-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-"Built a robust, scalable documentation platform that our team actually wants to use."
+"It's not just about making docs work — it's about making them feel intuitive, modern, and enjoyable to use."
 </blockquote>
 </div>
     `,
@@ -461,56 +385,56 @@ export const slides = [
     `
   },
   {
-    id: 7,
+    id: 8,
     title: "Before vs After: Documentation Experience",
     type: "content",
     layout: "full",
     content: `
-# Before vs After: Documentation Experience
+# Before vs After
 
 <div class="grid grid-cols-2 gap-8 mt-8">
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">ClickUp Chaos</h3>
+<div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl border-l-4 border-red-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+<h3 class="text-xl font-bold text-red-800 mb-6">ClickUp Chaos</h3>
 <div class="grid grid-cols-2 gap-4 mb-6">
 <div class="bg-white/50 p-4 rounded-lg">
 <div class="text-sm text-gray-600 mb-1">Search Time</div>
-<div class="text-2xl font-bold text-primary-600">5-10 minutes</div>
+<div class="text-2xl font-bold text-red-600">5-10 minutes</div>
 </div>
 <div class="bg-white/50 p-4 rounded-lg">
 <div class="text-sm text-gray-600 mb-1">Maintenance</div>
-<div class="text-2xl font-bold text-primary-600">Manual</div>
+<div class="text-2xl font-bold text-red-600">Manual</div>
 </div>
 </div>
 <div class="bg-white/50 p-4 rounded-lg">
-<h4 class="font-semibold text-primary-800 mb-4">Pain Points</h4>
+<h4 class="font-semibold text-red-800 mb-4">Pain Points</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>Inconsistent formatting</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>Poor navigation</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>No version control</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>Slow search</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>Inconsistent formatting</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>Poor navigation</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>No version control</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>Slow search</li>
 </ul>
 </div>
 </div>
 
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">Git-First Hub</h3>
+<div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+<h3 class="text-xl font-bold text-green-800 mb-6">Git-First Hub</h3>
 <div class="grid grid-cols-2 gap-4 mb-6">
 <div class="bg-white/50 p-4 rounded-lg">
 <div class="text-sm text-gray-600 mb-1">Search Time</div>
-<div class="text-2xl font-bold text-primary-600">30 seconds</div>
+<div class="text-2xl font-bold text-green-600">30 seconds</div>
 </div>
 <div class="bg-white/50 p-4 rounded-lg">
 <div class="text-sm text-gray-600 mb-1">Maintenance</div>
-<div class="text-2xl font-bold text-primary-600">Automated</div>
+<div class="text-2xl font-bold text-green-600">Automated</div>
 </div>
 </div>
 <div class="bg-white/50 p-4 rounded-lg">
-<h4 class="font-semibold text-primary-800 mb-4">Improvements</h4>
+<h4 class="font-semibold text-green-800 mb-4">Improvements</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>Consistent formatting</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>Intuitive navigation</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>Git version control</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></span>Fast search</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Consistent formatting</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Intuitive navigation</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Git version control</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Fast search</li>
 </ul>
 </div>
 </div>
@@ -518,8 +442,8 @@ export const slides = [
 
 <div class="mt-8 text-center">
 <div class="bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-4">Key Improvements</h3>
-<p class="text-lg text-gray-700">Dramatic improvements in search speed and maintenance automation.</p>
+<h3 class="text-xl font-bold text-primary-800 mb-4">Dramatic Improvements</h3>
+<p class="text-lg text-gray-700">Search speed and maintenance automation transformed the experience.</p>
 </div>
 </div>
 `,
@@ -531,7 +455,7 @@ export const slides = [
     `
   },
   {
-    id: 8,
+    id: 9,
     title: "Live Demo",
     type: "demo",
     layout: "full",
@@ -567,28 +491,28 @@ export const slides = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: "Questions & Discussion",
     type: "content",
     layout: "full",
     content: `
-# Questions & Discussion
+# Key Takeaways
 
 <div class="grid grid-cols-1 gap-8 mt-8">
 <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">Key Takeaways</h3>
+<h3 class="text-xl font-bold text-primary-800 mb-6">Lessons Learned</h3>
 <ul class="space-y-4 text-gray-700">
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Git-first approach</strong> ensures version control and collaboration</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Automation</strong> reduces maintenance overhead and improves quality</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Security</strong> is built-in, not bolted on</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Scalability</strong> supports team growth and knowledge expansion</li>
-<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span><strong>Continuous Learning</strong> in DevOps means always researching and studying, making you a better engineer</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>As a DevOps engineer, you're always learning — Git workflows, new technologies, testing, security</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>It's actually fun! Exploring new tools and solving complex problems keeps the work exciting</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Security + automation = trust + scale — the foundation of reliable DevOps</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Good documentation makes teams faster, more consistent, and less siloed</li>
+<li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>Technical growth + user experience design = better solutions for everyone</li>
 </ul>
 </div>
 </div>
 
 <div class="mt-16 text-center">
-<h2 class="text-7xl font-bold text-primary-700 mb-8 animate-float">
+<h2 class="text-5xl font-bold text-primary-700 mb-8 animate-float">
 <span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.1s; animation-duration: 1s; animation-fill-mode: forwards;">T</span>
 <span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.3s; animation-duration: 1s; animation-fill-mode: forwards;">h</span>
 <span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.5s; animation-duration: 1s; animation-fill-mode: forwards;">a</span>

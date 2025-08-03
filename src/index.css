@@ -9,10 +9,21 @@
 
   body {
     @apply bg-primary-50 text-gray-900 overflow-hidden;
+    font-family: 'Reem Kufi', system-ui, sans-serif;
   }
   
   * {
     @apply box-border;
+  }
+
+  /* Ensure Reem Kufi is applied to all text elements */
+  h1, h2, h3, h4, h5, h6, p, span, div, li, ul, ol, a, button, input, textarea, label, th, td, caption {
+    font-family: 'Reem Kufi', system-ui, sans-serif !important;
+  }
+
+  /* Keep monospace fonts for code elements */
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
   }
 }
 
@@ -121,4 +132,24 @@
   .slide-container {
     @apply h-auto min-h-screen;
   }
+}
+
+/* Additional Reem Kufi enforcement for dynamic content */
+.mermaid, .mermaid * {
+  font-family: 'Reem Kufi', system-ui, sans-serif !important;
+}
+
+/* Ensure all SVG text elements use Reem Kufi */
+svg text, svg tspan {
+  font-family: 'Reem Kufi', system-ui, sans-serif !important;
+}
+
+/* Force Reem Kufi on any remaining elements */
+[class*="text-"], [class*="font-"] {
+  font-family: 'Reem Kufi', system-ui, sans-serif !important;
+}
+
+/* Exception for monospace elements */
+.font-mono, code, pre, .code-block {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
 } 

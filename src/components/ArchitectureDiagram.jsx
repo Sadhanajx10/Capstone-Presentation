@@ -5,6 +5,10 @@ import mermaid from 'mermaid'
 const ArchitectureDiagram = ({ title, description, diagram, highlights = [], diagramLabel }) => {
   const diagramRef = useRef(null)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [zoomLevel, setZoomLevel] = useState(1)
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
+  const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     // Configure Mermaid
@@ -54,6 +58,66 @@ const ArchitectureDiagram = ({ title, description, diagram, highlights = [], dia
     }
   }, [diagram])
 
+  // Zoom and pan handlers
+  const handleZoomIn = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setZoomLevel(prev => Math.min(prev * 1.2, 3))
+  }
+
+  const handleZoomOut = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setZoomLevel(prev => Math.max(prev / 1.2, 0.3))
+  }
+
+  const handleReset = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setZoomLevel(1)
+    setPosition({ x: 0, y: 0 })
+  }
+
+  const handleMouseDown = (e) => {
+    if (e.button === 0) { // Left click only
+      e.preventDefault()
+      setIsDragging(true)
+      setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y })
+    }
+  }
+
+  const handleMouseMove = (e) => {
+    if (isDragging) {
+      e.preventDefault()
+      setPosition({
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y
+      })
+    }
+  }
+
+  const handleMouseUp = () => {
+    setIsDragging(false)
+  }
+
+  const handleWheel = (e) => {
+    e.preventDefault()
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    
+    const delta = e.deltaY > 0 ? 0.9 : 1.1
+    const newZoom = Math.max(0.3, Math.min(3, zoomLevel * delta))
+    
+    // Calculate new position to zoom towards mouse
+    const scaleChange = newZoom / zoomLevel
+    const newX = x - (x - position.x) * scaleChange
+    const newY = y - (y - position.y) * scaleChange
+    
+    setZoomLevel(newZoom)
+    setPosition({ x: newX, y: newY })
+  }
+
   return (
     <div className="w-full h-full flex flex-col">
       {/* Header */}
@@ -77,8 +141,53 @@ const ArchitectureDiagram = ({ title, description, diagram, highlights = [], dia
         )}
       </motion.div>
 
+      {/* Zoom Controls */}
+      <div 
+        className="flex justify-center mb-4 space-x-2"
+        onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => e.stopPropagation()}
+      >
+        <motion.button
+          onClick={handleZoomOut}
+          className="px-3 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Zoom Out"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" />
+          </svg>
+        </motion.button>
+        
+        <motion.button
+          onClick={handleReset}
+          className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Reset View"
+        >
+          Reset
+        </motion.button>
+        
+        <motion.button
+          onClick={handleZoomIn}
+          className="px-3 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Zoom In"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+          </svg>
+        </motion.button>
+        
+        <div className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg">
+          {Math.round(zoomLevel * 100)}%
+        </div>
+      </div>
+
       {/* Diagram Container - Full Height with Scroll */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-hidden relative">
         <motion.div
           className="relative w-full max-w-6xl mx-auto"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -92,12 +201,33 @@ const ArchitectureDiagram = ({ title, description, diagram, highlights = [], dia
             </div>
           )}
 
-          {/* Diagram - Full Height */}
+          {/* Zoom Container */}
           <div
-            ref={diagramRef}
-            className="w-full bg-transparent rounded-lg p-8 border-2 border-dashed border-gray-300"
-            style={{ minHeight: '100vh' }}
-          />
+            className="relative overflow-hidden"
+            style={{
+              cursor: isDragging ? 'grabbing' : 'grab',
+              minHeight: '60vh'
+            }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            onWheel={handleWheel}
+            onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+          >
+            {/* Diagram - Full Height */}
+            <div
+              ref={diagramRef}
+              className="w-full bg-transparent rounded-lg p-8 border-2 border-dashed border-gray-300"
+              style={{ 
+                minHeight: '100vh',
+                transform: `scale(${zoomLevel}) translate(${position.x}px, ${position.y}px)`,
+                transformOrigin: '0 0',
+                transition: isDragging ? 'none' : 'transform 0.2s ease-out'
+              }}
+            />
+          </div>
           
           {/* Fallback content if diagram fails */}
           {isLoaded && diagramRef.current && !diagramRef.current.innerHTML.includes('svg') && (
