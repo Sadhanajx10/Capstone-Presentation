@@ -99,7 +99,7 @@ export const slides = [
     `
   },
   {
-    id: 6,
+    id: 7,
     title: "System Architecture & GitHub Workflow",
     type: "architecture",
     layout: "full",
@@ -340,7 +340,7 @@ export const slides = [
     `
   },
   {
-    id: 7,
+    id: 6,
     title: "Implementation Details",
     type: "content",
     layout: "full",
