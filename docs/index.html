@@ -21,22 +21,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     
     <title>Capstone Presentation - DevOps Documentation Site</title>
-    <script type="module" crossorigin src="/Capstone-Presentation/assets/index-b2f5d4b9.js"></script>
+    <script type="module" crossorigin src="/Capstone-Presentation/assets/index-aaf1fbdd.js"></script>
     <link rel="modulepreload" crossorigin href="/Capstone-Presentation/assets/vendor-8a332d8f.js">
     <link rel="modulepreload" crossorigin href="/Capstone-Presentation/assets/ui-c82173a1.js">
     <link rel="modulepreload" crossorigin href="/Capstone-Presentation/assets/animations-9aa22741.js">
-    <link rel="stylesheet" href="/Capstone-Presentation/assets/index-d7e9626c.css">
+    <link rel="stylesheet" href="/Capstone-Presentation/assets/index-10d1ea5a.css">
   <link rel="manifest" href="/Capstone-Presentation/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/Capstone-Presentation/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
     
     <script type="text/javascript">
-      // Simple URL handling for GitHub Pages
+      // Force correct URL for GitHub Pages
       (function() {
-        // Ensure we're on the correct base path
         var l = window.location;
-        if (l.pathname !== '/Capstone-Presentation/' && !l.pathname.startsWith('/Capstone-Presentation/')) {
-          l.replace('/Capstone-Presentation/');
+        var correctPath = '/Capstone-Presentation/';
+        
+        // If we're not on the correct path, redirect
+        if (l.pathname !== correctPath) {
+          l.replace(correctPath);
+        }
+        
+        // Prevent any redirects to portfolio
+        if (l.hostname === 'sadhanajx10.github.io' && l.pathname === '/') {
+          l.replace(correctPath);
         }
       })();
     </script>
