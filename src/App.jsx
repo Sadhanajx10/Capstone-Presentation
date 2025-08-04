@@ -32,13 +32,16 @@ function App() {
     return () => clearTimeout(timer)
   }, [startPresentation])
 
-  // Timer effect
+  // Timer effect - resets every 10 minutes
   useEffect(() => {
     let interval
     if (isTimerRunning && startTime) {
       interval = setInterval(() => {
         const elapsed = Date.now() - startTime
-        updateElapsedTime(elapsed)
+        // Reset timer every 10 minutes (600,000 ms)
+        const resetInterval = 600000 // 10 minutes
+        const adjustedElapsed = elapsed % resetInterval
+        updateElapsedTime(adjustedElapsed)
       }, 1000)
     }
 

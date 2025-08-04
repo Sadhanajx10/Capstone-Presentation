@@ -99,59 +99,6 @@ export const slides = [
     `
   },
   {
-    id: 7,
-    title: "System Architecture & GitHub Workflow",
-    type: "architecture",
-    layout: "full",
-    content: {
-                diagram: `graph TD
-        A[Developer] --> B[Create Feature Branch]
-        B --> C[Edit Markdown/MDX Files]
-        C --> D[Local Testing: npm start]
-        D --> E[Git Commit with Conventional Commits]
-        E --> F[Push & Create Pull Request]
-        F --> G[Automated Checks]
-        G --> H{PR Title Valid?}
-        H -->|No| I[Edit PR Title]
-        I --> F
-        H -->|Yes| J[Markdown Linting]
-        J --> K{All Tests Pass?}
-        K -->|No| L[Fix Issues]
-        L --> E
-        K -->|Yes| M[DevOps Team Review]
-        M --> N{Approved?}
-        N -->|No| O[Address Feedback]
-        O --> E
-        N -->|Yes| P[Merge to Main]
-        P --> Q[GitHub Actions Deploy]
-        Q --> R[Build Docusaurus Site]
-        R --> S[Deploy to GitHub Pages]
-        S --> T[Live Documentation Site]
-        T --> U[JumpCloud SSO Access]
-        
-        style A fill:#e1f5fe
-        style F fill:#f3e5f5
-        style G fill:#fff3e0
-        style J fill:#e8f5e8
-        style M fill:#fff8e1
-        style Q fill:#e3f2fd
-        style R fill:#e8f5e8
-        style S fill:#fce4ec
-        style T fill:#e0f2f1
-        style U fill:#f1f8e9`,
-      title: "GitHub Workflow",
-      description: "Complete CI/CD pipeline with automated quality checks, branch protection, and secure deployment",
-      diagramLabel: "Mermaid Diagram"
-    },
-    speakerNotes: `
-- Explain the end-to-end workflow
-- Highlight the quality gates and protection rules
-- Show how automation ensures consistency
-- Emphasize the security aspects
-- This slide should take about 2 minutes
-    `
-  },
-  {
     id: 3,
     title: "Static Site Generator Comparison",
     type: "content",
@@ -386,6 +333,81 @@ export const slides = [
   },
   {
     id: 8,
+    title: "System Architecture & GitHub Workflow",
+    type: "architecture",
+    layout: "full",
+    content: {
+                diagram: `graph TD
+        A[Developer] --> B[Create Feature Branch]
+        B --> C[Edit Markdown/MDX Files]
+        C --> D[Local Testing: npm start]
+        D --> E[Git Commit with Conventional Commits]
+        E --> F[Push & Create Pull Request]
+        F --> G[Automated Checks]
+        G --> H{PR Title Valid?}
+        H -->|No| I[Edit PR Title]
+        I --> F
+        H -->|Yes| J[Markdown Linting]
+        J --> K{All Tests Pass?}
+        K -->|No| L[Fix Issues]
+        L --> E
+        K -->|Yes| M[DevOps Team Review]
+        M --> N{Approved?}
+        N -->|No| O[Request Changes]
+        O --> P[Update Code]
+        P --> E
+        N -->|Yes| Q[Merge to Main]
+        Q --> R[GitHub Actions Deploy]
+        R --> S[Build Docusaurus Site]
+        S --> T[Deploy to GitHub Pages]
+        T --> U[JumpCloud SSO Access]
+        U --> V[Live Documentation Site]
+        
+        style A fill:#e1f5fe
+        style B fill:#f3e5f5
+        style C fill:#e8f5e8
+        style D fill:#fff3e0
+        style E fill:#fce4ec
+        style F fill:#f1f8e9
+        style G fill:#e0f2f1
+        style H fill:#fff8e1
+        style I fill:#ffebee
+        style J fill:#e8eaf6
+        style K fill:#fff8e1
+        style L fill:#ffebee
+        style M fill:#e0f2f1
+        style N fill:#fff8e1
+        style O fill:#ffebee
+        style P fill:#fce4ec
+        style Q fill:#e8f5e8
+        style R fill:#f3e5f5
+        style S fill:#e1f5fe
+        style T fill:#f3e5f5
+        style U fill:#e8f5e8
+        style V fill:#e1f5fe`,
+                title: "GitHub Workflow"
+            },
+    speakerNotes: `
+- Walk through the complete workflow
+- Emphasize the security aspects
+- This slide should take about 2 minutes
+    `
+  },
+  {
+    id: 9,
+    title: "Live Demo",
+    type: "demo",
+    layout: "center",
+    component: "LiveDemo",
+    speakerNotes: `
+- Show the live site
+- Demonstrate key features
+- Highlight the user experience
+- This slide should take about 1 minute
+    `
+  },
+  {
+    id: 10,
     title: "Before vs After: Documentation Experience",
     type: "content",
     layout: "full",
@@ -421,7 +443,7 @@ export const slides = [
 <div class="grid grid-cols-2 gap-4 mb-6">
 <div class="bg-white/50 p-4 rounded-lg">
 <div class="text-sm text-gray-600 mb-1">Search Time</div>
-<div class="text-2xl font-bold text-green-600">30 seconds</div>
+<div class="text-2xl font-bold text-green-600">&lt; 30 seconds</div>
 </div>
 <div class="bg-white/50 p-4 rounded-lg">
 <div class="text-sm text-gray-600 mb-1">Maintenance</div>
@@ -431,76 +453,39 @@ export const slides = [
 <div class="bg-white/50 p-4 rounded-lg">
 <h4 class="font-semibold text-green-800 mb-4">Improvements</h4>
 <ul class="text-sm text-gray-700 space-y-2">
-<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Consistent formatting</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Intuitive navigation</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Git version control</li>
-<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Fast search</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Structured content</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Fast navigation</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Version control</li>
+<li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>Instant search</li>
 </ul>
 </div>
 </div>
 </div>
 
 <div class="mt-8 text-center">
-<div class="bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-4">Dramatic Improvements</h3>
-<p class="text-lg text-gray-700">Search speed and maintenance automation transformed the experience.</p>
+<blockquote class="text-2xl font-semibold text-gray-800 italic bg-gradient-to-r from-primary-100 to-primary-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+"From chaos to clarity: Documentation that actually works for engineers."
+</blockquote>
 </div>
-</div>
-`,
+    `,
     speakerNotes: `
-- Emphasize the dramatic time savings (5-10 minutes → 30 seconds)
-- Highlight the onboarding improvement (2-3 weeks → 3-5 days)
-- Show how accuracy improved from 60% to 95%
+- Emphasize the dramatic improvement
+- Quantify the benefits
+- Show the transformation
 - This slide should take about 1 minute
     `
   },
   {
-    id: 9,
-    title: "Live Demo",
-    type: "demo",
-    layout: "full",
-    content: {
-      title: "Live Demo: Documentation Site",
-      url: "https://glowing-system-mrjj8we.pages.github.io/",
-      fallback: {
-        title: "Documentation Site Demo",
-        description: "Your GitHub Pages documentation site is live at the URL above! Here's what you've built:",
-        features: [
-          "Git-backed documentation with PR workflow",
-          "Fast search and navigation",
-          "Consistent Markdown formatting",
-          "Responsive design for all devices",
-          "JumpCloud SSO integration",
-          "Automated deployment via GitHub Actions"
-        ],
-        metrics: {
-          "Search Time": "30 seconds (vs 5-10 minutes in ClickUp)",
-          "Onboarding": "3-5 days (vs 2-3 weeks)",
-          "Accuracy": "95% (vs 60%)",
-          "Maintenance": "Automated (vs Manual)"
-        }
-      }
-    },
-    speakerNotes: `
-- This is the moment to show the actual solution
-- Have a backup screen recording ready
-- Focus on the user experience
-- Demonstrate search speed and content quality
-- This slide should take about 1.5 minutes
-    `
-  },
-
-  {
-    id: 10,
-    title: "Questions & Discussion",
+    id: 11,
+    title: "Key Takeaways",
     type: "content",
     layout: "full",
     content: `
 # Key Takeaways
 
-<div class="grid grid-cols-1 gap-8 mt-8">
-<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
-<h3 class="text-xl font-bold text-primary-800 mb-6">Lessons Learned</h3>
+<div class="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-xl border-l-4 border-primary-500 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+<h2 class="text-3xl font-bold text-primary-800 mb-8 text-center">Lessons Learned</h2>
+<div class="grid grid-cols-1 gap-6">
 <ul class="space-y-4 text-gray-700">
 <li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>As a DevOps engineer, you're always learning — Git workflows, new technologies, testing, security</li>
 <li class="flex items-center hover:bg-primary-100 p-3 rounded-lg transition-all duration-300"><span class="w-2 h-2 bg-primary-500 rounded-full mr-4 flex-shrink-0"></span>It's actually fun! Exploring new tools and solving complex problems keeps the work exciting</li>
@@ -511,52 +496,16 @@ export const slides = [
 </div>
 </div>
 
-<div class="mt-16 text-center">
-<h2 class="text-5xl font-bold text-primary-700 mb-8 animate-float">
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.1s; animation-duration: 1s; animation-fill-mode: forwards;">T</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.3s; animation-duration: 1s; animation-fill-mode: forwards;">h</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.5s; animation-duration: 1s; animation-fill-mode: forwards;">a</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.7s; animation-duration: 1s; animation-fill-mode: forwards;">n</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 0.9s; animation-duration: 1s; animation-fill-mode: forwards;">k</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 1.1s; animation-duration: 1s; animation-fill-mode: forwards;"> </span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 1.3s; animation-duration: 1s; animation-fill-mode: forwards;">Y</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 1.5s; animation-duration: 1s; animation-fill-mode: forwards;">o</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 1.7s; animation-duration: 1s; animation-fill-mode: forwards;">u</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 1.9s; animation-duration: 1s; animation-fill-mode: forwards;">!</span>
-</h2>
-<div class="text-3xl font-semibold text-primary-700 mb-6 animate-float" style="animation-delay: 1s;">
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 2.5s; animation-duration: 1s; animation-fill-mode: forwards;">F</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 2.7s; animation-duration: 1s; animation-fill-mode: forwards;">o</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 2.9s; animation-duration: 1s; animation-fill-mode: forwards;">r</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 3.1s; animation-duration: 1s; animation-fill-mode: forwards;"> </span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 3.3s; animation-duration: 1s; animation-fill-mode: forwards;">y</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 3.5s; animation-duration: 1s; animation-fill-mode: forwards;">o</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 3.7s; animation-duration: 1s; animation-fill-mode: forwards;">u</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 3.9s; animation-duration: 1s; animation-fill-mode: forwards;">r</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 4.1s; animation-duration: 1s; animation-fill-mode: forwards;"> </span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 4.3s; animation-duration: 1s; animation-fill-mode: forwards;">a</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 4.5s; animation-duration: 1s; animation-fill-mode: forwards;">t</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 4.7s; animation-duration: 1s; animation-fill-mode: forwards;">t</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 4.9s; animation-duration: 1s; animation-fill-mode: forwards;">e</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 5.1s; animation-duration: 1s; animation-fill-mode: forwards;">n</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 5.3s; animation-duration: 1s; animation-fill-mode: forwards;">t</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 5.5s; animation-duration: 1s; animation-fill-mode: forwards;">i</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 5.7s; animation-duration: 1s; animation-fill-mode: forwards;">o</span>
-<span class="inline-block opacity-0 animate-fadeInUp" style="animation-delay: 5.9s; animation-duration: 1s; animation-fill-mode: forwards;">n</span>
-</div>
-<div class="mt-8 flex justify-center space-x-6">
-<div class="w-3 h-3 bg-primary-500 rounded-full animate-pulse" style="animation-delay: 6.5s;"></div>
-<div class="w-3 h-3 bg-primary-600 rounded-full animate-pulse" style="animation-delay: 6.7s;"></div>
-<div class="w-3 h-3 bg-primary-700 rounded-full animate-pulse" style="animation-delay: 6.9s;"></div>
-</div>
+<div class="mt-8 text-center">
+<div class="text-5xl font-bold text-primary-600 mb-4 animate-float">Thank You!</div>
+<div class="text-xl text-gray-600">Questions & Discussion</div>
 </div>
     `,
     speakerNotes: `
-- Summarize the key points
-- Provide contact information
-- Invite questions
-- Keep energy high for Q&A
-- This slide should take about 30 seconds
+- Summarize key learnings
+- Emphasize the continuous learning aspect
+- End with confidence
+- This slide should take about 1 minute
     `
   }
-] 
+]; 
