@@ -399,6 +399,10 @@ export const slides = [
     type: "demo",
     layout: "center",
     component: "LiveDemo",
+    content: {
+      title: "Live Documentation Site",
+      url: "https://glowing-system-mrjj8we.pages.github.io/"
+    },
     speakerNotes: `
 - Show the live site
 - Demonstrate key features
