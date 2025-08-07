@@ -16,11 +16,12 @@ const Presentation = () => {
     resetPresentation
   } = usePresentationStore()
 
-  // Reset presentation and set total slides count on mount
+  // Set total slides count on mount (don't reset timer here)
   useEffect(() => {
-    resetPresentation()
     setTotalSlides(slides.length)
-  }, [resetPresentation, setTotalSlides])
+  }, [setTotalSlides])
+
+  // Note: Timer is started in App.jsx when splash screen ends
 
 
 

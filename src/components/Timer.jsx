@@ -6,6 +6,11 @@ import { usePresentationStore } from '../store/presentationStore'
 const Timer = () => {
   const { getFormattedTime, elapsedTime, isTimerRunning } = usePresentationStore()
   
+  // Debug logging
+  React.useEffect(() => {
+    console.log('⏰ Timer component - elapsedTime:', elapsedTime, 'isTimerRunning:', isTimerRunning)
+  }, [elapsedTime, isTimerRunning])
+  
   // Calculate time warnings (10 minutes = 600000ms)
   const totalTime = 600000 // 10 minutes
   const warningThreshold = totalTime * 0.8 // 8 minutes
@@ -23,7 +28,8 @@ const Timer = () => {
     return 'bg-gray-800/50'
   }
 
-  if (!isTimerRunning) return null
+  // Always show timer, even if not running yet
+  // if (!isTimerRunning) return null
 
   return (
     <motion.div
@@ -34,8 +40,8 @@ const Timer = () => {
     >
       <div className="flex items-center space-x-2">
         <Clock className="w-4 h-4 text-gray-400" />
-        <span className={`font-mono text-sm font-medium ${getTimeColor()}`}>
-          {getFormattedTime()}
+        <span className={`font-mono text-sm font-medium ${isTimerRunning ? getTimeColor() : 'text-gray-400'}`}>
+          {isTimerRunning ? getFormattedTime() : 'Ready'}
         </span>
       </div>
       
@@ -44,7 +50,7 @@ const Timer = () => {
         <motion.div
           className="h-full bg-gradient-to-r from-primary-500 to-primary-700 rounded-full"
           initial={{ width: 0 }}
-          animate={{ width: `${Math.min((elapsedTime / totalTime) * 100, 100)}%` }}
+          animate={{ width: `${isTimerRunning ? Math.min((elapsedTime / totalTime) * 100, 100) : 0}%` }}
           transition={{ duration: 0.3 }}
         />
       </div>

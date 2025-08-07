@@ -25,32 +25,47 @@ function App() {
 
   // Reset timer and handle splash screen transition
   useEffect(() => {
+    // Clear any existing localStorage timer data
+    localStorage.removeItem('presentation-store')
+    
     // Reset timer on page load
     resetPresentation()
+    console.log('🔄 Timer reset on page load')
     
     const timer = setTimeout(() => {
       setShowSplash(false)
+      // Start timer immediately when first slide appears
       startPresentation()
-    }, 5000) // 5 seconds splash
+      console.log('🚀 Presentation started, timer should be at 0:00')
+    }, 1000) // 1 second splash - faster transition
 
     return () => clearTimeout(timer)
-  }, [startPresentation, resetPresentation])
+  }, []) // Empty dependency array - only run on page load/refresh
 
   // Timer effect - resets every 10 minutes
   useEffect(() => {
+    console.log('⏰ Timer effect - isTimerRunning:', isTimerRunning, 'startTime:', startTime)
+    
     let interval
     if (isTimerRunning && startTime) {
+      console.log('⏰ Starting timer interval')
       interval = setInterval(() => {
         const elapsed = Date.now() - startTime
         // Reset timer every 10 minutes (600,000 ms)
         const resetInterval = 600000 // 10 minutes
         const adjustedElapsed = elapsed % resetInterval
         updateElapsedTime(adjustedElapsed)
+        console.log('⏰ Timer update - elapsed:', adjustedElapsed)
       }, 1000)
+    } else {
+      console.log('⏰ Timer not running - isTimerRunning:', isTimerRunning, 'startTime:', startTime)
     }
 
     return () => {
-      if (interval) clearInterval(interval)
+      if (interval) {
+        console.log('⏰ Clearing timer interval')
+        clearInterval(interval)
+      }
     }
   }, [isTimerRunning, startTime, updateElapsedTime])
 
