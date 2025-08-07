@@ -19,18 +19,22 @@ function App() {
     isTimerRunning,
     updateElapsedTime,
     startTime,
-    startPresentation
+    startPresentation,
+    resetPresentation
   } = usePresentationStore()
 
-  // Handle splash screen transition
+  // Reset timer and handle splash screen transition
   useEffect(() => {
+    // Reset timer on page load
+    resetPresentation()
+    
     const timer = setTimeout(() => {
       setShowSplash(false)
       startPresentation()
-    }, 5000) // 3 seconds splash
+    }, 5000) // 5 seconds splash
 
     return () => clearTimeout(timer)
-  }, [startPresentation])
+  }, [startPresentation, resetPresentation])
 
   // Timer effect - resets every 10 minutes
   useEffect(() => {
